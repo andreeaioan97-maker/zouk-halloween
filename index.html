@@ -4,195 +4,149 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Zouk Halloween Party · Free Spirit Dance</title>
-<meta name="description" content="Free zouk Halloween dance party by Free Spirit Dance, Bucharest's first Brazilian Zouk school. 1 November at Latin Dreams, Cocor. Free entry, donations welcome.">
-<meta name="theme-color" content="#0f172a">
+<meta name="description" content="Free zouk Halloween dance party by Free Spirit Dance School. 1 November at Latin Dreams, Cocor, Bucharest. Free entry, donations welcome.">
+<meta name="theme-color" content="#120a1c">
 <meta property="og:title" content="Zouk Halloween Party · Free Spirit Dance">
 <meta property="og:description" content="1 November · Latin Dreams, Cocor, Bucharest · Free entry, donations welcome.">
-<meta property="og:image" content="img/hero.jpg">
 <meta property="og:type" content="website">
-<link rel="icon" href="img/logo.svg?v=3" type="image/svg+xml">
-<link rel="preload" href="fonts/urbanist.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%83%3C/text%3E%3C/svg%3E">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"DanceEvent","name":"Zouk Halloween Party","startDate":"2026-11-01T18:00:00+02:00","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"Latin Dreams","address":{"@type":"PostalAddress","streetAddress":"Bd. I.C. Brătianu 29-33 (Cocor)","addressLocality":"Bucharest","addressCountry":"RO"}},"organizer":{"@type":"Organization","name":"Free Spirit Dance","url":"https://freespiritdance.ro"},"isAccessibleForFree":true}
+{"@context":"https://schema.org","@type":"DanceEvent","name":"Zouk Halloween Party","startDate":"2026-11-01T18:00:00+02:00","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"Latin Dreams","address":{"@type":"PostalAddress","streetAddress":"Bd. I.C. Brătianu 29-33 (Cocor)","addressLocality":"Bucharest","addressCountry":"RO"}},"organizer":{"@type":"Organization","name":"Free Spirit Dance School"},"isAccessibleForFree":true}
 </script>
 <style>
-@font-face{font-family:Urbanist;src:url(fonts/urbanist.woff2) format("woff2");font-weight:100 900;font-display:swap}
-@font-face{font-family:"Plus Jakarta Sans";src:url(fonts/jakarta.woff2) format("woff2");font-weight:200 800;font-display:swap}
 :root{
-  /* Free Spirit Dance brand (from freespiritdance.ro) */
-  --ink:#0f172a; --paper:#fafbff; --violet:#7c4dff; --pink:#ff4081;
-  --grad:linear-gradient(135deg,#7c4dff,#ff4081);
-  --lav:#f1ecff; --rose:#fff0f5; --muted:#5b6478; --line:#e6e8f2;
-  --head:Urbanist,system-ui,sans-serif; --body:"Plus Jakarta Sans",system-ui,sans-serif;
+  --bg:#120a1c; --bg2:#1c1030; --ink:#f6eee3; --muted:#b9a9c9;
+  --orange:#ff8a1f; --orange-d:#e56a00; --violet:#8b5cf6; --line:rgba(255,255,255,.12);
+  --card:rgba(255,255,255,.05);
+  --display: "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --body: -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif;
 }
 *{box-sizing:border-box;margin:0}
 html{scroll-behavior:smooth}
-body{background:var(--paper);color:var(--ink);font-family:var(--body);line-height:1.65;overflow-x:hidden}
-h1,h2,h3{font-family:var(--head);letter-spacing:-.02em;line-height:1.05}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.6;overflow-x:hidden}
 a{color:inherit}
-.wrap{width:min(1080px,100% - 32px);margin-inline:auto}
-.gt{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.wrap{width:min(1040px,100% - 32px);margin-inline:auto}
 
-/* nav */
-nav{position:absolute;inset:0 0 auto 0;z-index:5;padding:18px 0}
-nav .wrap{display:flex;align-items:center;justify-content:space-between}
-@media (max-width:520px){.navlink{display:none}}
-.logo{flex:none;width:fit-content;background:#fff;border-radius:18px;padding:6px 10px 2px;display:block;box-shadow:0 8px 30px rgba(0,0,0,.25)}
-.logo img{height:64px;width:auto;display:block}
-.navlink{color:#fff;text-decoration:none;font-weight:600;font-size:.92rem;border:1px solid rgba(255,255,255,.28);padding:9px 16px;border-radius:999px;backdrop-filter:blur(6px)}
-.navlink:hover{background:rgba(255,255,255,.12)}
-
-/* hero (night version of the brand) */
-.hero{position:relative;background:
-   radial-gradient(55vmax 40vmax at 90% 10%,rgba(124,77,255,.55),transparent 60%),
-   radial-gradient(45vmax 35vmax at 0% 100%,rgba(255,64,129,.38),transparent 60%),
-   var(--ink);
-  color:#fff;padding:120px 0 80px;overflow:hidden}
+/* hero */
+.hero{position:relative;min-height:100svh;display:grid;place-items:center;text-align:center;padding:80px 0 60px;
+  background:
+   radial-gradient(60vmin 60vmin at 50% 38%,rgba(255,138,31,.30),transparent 70%),
+   radial-gradient(70vmin 50vmin at 85% 100%,rgba(139,92,246,.35),transparent 70%),
+   radial-gradient(50vmin 40vmin at 10% 90%,rgba(139,92,246,.22),transparent 70%),
+   linear-gradient(var(--bg),var(--bg2));
+  overflow:hidden}
+.moon{position:absolute;top:8%;right:10%;width:clamp(70px,14vw,150px);aspect-ratio:1;border-radius:50%;
+  background:radial-gradient(circle at 35% 35%,#fff3d6,#f3c36b 60%,#c98a2c);box-shadow:0 0 90px 20px rgba(255,190,90,.35);opacity:.9}
 .bats{position:absolute;inset:0;pointer-events:none}
-.bat{position:absolute;font-size:clamp(18px,3vw,32px);opacity:.6;animation:fly linear infinite}
-@keyframes fly{from{transform:translateX(-12vw)}50%{transform:translateX(50vw) translateY(-26px)}to{transform:translateX(112vw)}}
-.hero .wrap{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
-.badge{display:inline-flex;gap:10px;align-items:center;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:8px 16px;border-radius:999px;font-weight:700;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase}
-.badge i{width:9px;height:9px;border-radius:50%;background:var(--grad);display:block}
-h1{font-size:clamp(3.4rem,11vw,7.2rem);font-weight:800;margin:20px 0 14px}
-.sub{font-size:clamp(1.05rem,2.3vw,1.3rem);color:#dbe0f0;max-width:34ch}
-.pills{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0}
-.pill{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);padding:9px 16px;border-radius:999px;font-size:.93rem}
-.pill b{color:#ff8fb3}
-.btns{display:flex;flex-wrap:wrap;gap:12px}
-.btn{display:inline-block;text-decoration:none;padding:14px 26px;border-radius:999px;font-weight:700;font-family:var(--body);transition:.2s;border:2px solid transparent}
-.btn.primary{background:var(--grad);color:#fff;box-shadow:0 10px 30px rgba(124,77,255,.4)}
-.btn.primary:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(255,64,129,.4)}
-.btn.ghost{border-color:rgba(255,255,255,.35);color:#fff}
-.btn.ghost:hover{background:rgba(255,255,255,.1);transform:translateY(-2px)}
-.light .btn.ghost{border-color:var(--violet);color:var(--violet)}
-.light .btn.ghost:hover{background:var(--lav)}
-:focus-visible{outline:3px solid #ffb3cb;outline-offset:3px}
-.photo{position:relative}
-.photo img{width:100%;display:block;border-radius:32px;aspect-ratio:10/11;object-fit:cover;box-shadow:0 30px 80px rgba(0,0,0,.5)}
-.photo::before{content:"";position:absolute;inset:-14px;border-radius:42px;background:var(--grad);opacity:.55;filter:blur(30px);z-index:-1}
-.photo .tag{position:absolute;left:-10px;bottom:22px;background:#fff;color:var(--ink);padding:10px 18px;border-radius:999px;font-weight:800;font-family:var(--head);box-shadow:0 12px 30px rgba(0,0,0,.3)}
-.photo .tag span{color:var(--pink)}
-.count{display:flex;gap:10px;margin-top:30px}
-.count div{min-width:72px;padding:10px 8px;text-align:center;border-radius:18px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16)}
-.count strong{display:block;font-family:var(--head);font-size:1.9rem;line-height:1.1}
-.count span{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:#b9c0d6}
+.bat{position:absolute;font-size:clamp(18px,3vw,34px);opacity:.75;animation:fly linear infinite}
+@keyframes fly{from{transform:translateX(-12vw) translateY(0)}50%{transform:translateX(50vw) translateY(-30px)}to{transform:translateX(112vw) translateY(10px)}}
+.kicker{letter-spacing:.32em;text-transform:uppercase;font-size:.78rem;color:var(--orange);font-weight:600}
+h1{font-family:var(--display);font-weight:700;font-style:italic;line-height:.95;margin:18px 0 10px;
+  font-size:clamp(3.2rem,15vw,9.5rem);
+  background:linear-gradient(180deg,#ffd9a1,var(--orange) 55%,var(--orange-d));-webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 6px 40px rgba(255,138,31,.35))}
+.sub{font-size:clamp(1.05rem,2.6vw,1.45rem);color:var(--ink);max-width:34ch;margin-inline:auto}
+.pills{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:28px 0}
+.pill{border:1px solid var(--line);background:var(--card);backdrop-filter:blur(6px);padding:9px 16px;border-radius:999px;font-size:.95rem}
+.pill b{color:var(--orange)}
+.btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.btn{display:inline-block;text-decoration:none;padding:13px 24px;border-radius:999px;font-weight:600;border:1px solid var(--orange);transition:.2s}
+.btn.primary{background:var(--orange);color:#1a0d00}
+.btn.primary:hover{background:#ffa14a;transform:translateY(-2px)}
+.btn.ghost{color:var(--orange)}
+.btn.ghost:hover{background:rgba(255,138,31,.12);transform:translateY(-2px)}
+.btn:focus-visible,a:focus-visible{outline:3px solid var(--violet);outline-offset:3px}
+
+/* countdown */
+.count{display:flex;gap:12px;justify-content:center;margin-top:34px}
+.count div{min-width:72px;padding:10px 8px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.count strong{display:block;font-family:var(--display);font-size:1.9rem;color:var(--orange);line-height:1.1}
+.count span{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 
 /* sections */
-section.s{padding:92px 0}
-.eyebrow{font-weight:800;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--violet);margin-bottom:12px}
-h2{font-size:clamp(2.1rem,6vw,3.6rem);font-weight:800;margin-bottom:16px}
-.lead{color:var(--muted);max-width:60ch;font-size:1.05rem}
-.about{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
-.words{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
-.words span{font-family:var(--head);font-weight:800;font-size:1.05rem;padding:9px 20px;border-radius:999px;background:var(--lav);color:var(--violet)}
-.words span:nth-child(2){background:var(--rose);color:var(--pink)}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:24px;box-shadow:0 10px 30px rgba(15,23,42,.04)}
-.card .ic{font-size:1.7rem}
-.card h3{margin:8px 0 4px;font-size:1.25rem}
-.card p{color:var(--muted);font-size:.95rem}
+section.s{padding:84px 0}
+h2{font-family:var(--display);font-style:italic;font-size:clamp(2rem,6vw,3.2rem);margin-bottom:14px;line-height:1.1}
+h2 em{color:var(--orange)}
+.lead{color:var(--muted);max-width:60ch}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:34px}
+.card{border:1px solid var(--line);background:var(--card);border-radius:20px;padding:26px}
+.card .ic{font-size:1.8rem}
+.card h3{margin:10px 0 6px;font-family:var(--display);font-size:1.3rem}
+.card p{color:var(--muted);font-size:.97rem}
+.band{background:linear-gradient(135deg,rgba(255,138,31,.14),rgba(139,92,246,.16));border-block:1px solid var(--line)}
+.split{display:grid;grid-template-columns:1.1fr 1fr;gap:34px;align-items:center}
+.addr{font-size:1.15rem;margin:12px 0 22px}
+.addr small{display:block;color:var(--muted)}
+.mapbox{border-radius:20px;overflow:hidden;border:1px solid var(--line);aspect-ratio:4/3;background:var(--bg2)}
+.mapbox iframe{width:100%;height:100%;border:0;filter:invert(.9) hue-rotate(180deg) saturate(.7)}
+.people{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:16px;margin-top:34px}
+.person{border:1px solid var(--line);background:var(--card);border-radius:20px;overflow:hidden;transition:.25s}
+.person:hover{transform:translateY(-5px);border-color:var(--orange)}
+.person img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;filter:saturate(.9) contrast(1.05)}
+.person div{padding:14px 16px 18px}
+.person h3{font-family:var(--display);font-size:1.1rem;line-height:1.2}
+.person a{color:var(--orange);font-size:.9rem;text-decoration:none}
+.person a:hover{text-decoration:underline}
+.free{text-align:center}
+.free .big{font-family:var(--display);font-style:italic;font-size:clamp(2.6rem,10vw,5.5rem);color:var(--orange);line-height:1}
+.free p{max-width:52ch;margin:16px auto 0;color:var(--muted)}
 
-.team{background:linear-gradient(180deg,var(--lav),var(--paper))}
-.people{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px;margin-top:38px}
-.person{background:#fff;border-radius:26px;overflow:hidden;border:1px solid var(--line);box-shadow:0 14px 40px rgba(124,77,255,.1);transition:.25s}
-.person:hover{transform:translateY(-6px)}
-.person img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}
-.person div{padding:16px 18px 20px}
-.person h3{font-size:1.2rem}
-.person a{color:var(--violet);font-weight:600;font-size:.9rem;text-decoration:none}
-.person a:hover{color:var(--pink)}
-
-.free{background:var(--grad);color:#fff;text-align:center;padding:84px 0}
-.free .big{font-family:var(--head);font-weight:800;font-size:clamp(3rem,12vw,7rem);line-height:1}
-.free p{max-width:50ch;margin:16px auto 0;color:#fff3f8;font-size:1.1rem}
-
-.where{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center}
-.addr{margin:14px 0}
-.addr strong{font-family:var(--head);font-size:1.3rem}
-.addr small{display:block;color:var(--muted);font-size:.98rem}
-.mapbox{border-radius:28px;overflow:hidden;border:1px solid var(--line);aspect-ratio:4/3;box-shadow:0 14px 40px rgba(15,23,42,.1)}
-.mapbox iframe{width:100%;height:100%;border:0}
-
-footer{background:var(--ink);color:#b9c0d6;padding:56px 0 64px;font-size:.95rem}
-footer .wrap{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center}
-footer .logo{box-shadow:none}
-footer a{color:#ff8fb3;text-decoration:none;font-weight:600}
-footer a:hover{text-decoration:underline}
-footer .links{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:8px}
+footer{padding:50px 0 70px;text-align:center;color:var(--muted);font-size:.92rem;border-top:1px solid var(--line)}
+footer a{color:var(--orange)}
+footer .brand{font-family:var(--display);font-style:italic;font-size:1.4rem;color:var(--ink);margin-bottom:6px}
 
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s,transform .8s}
 .reveal.in{opacity:1;transform:none}
-@media (max-width:820px){
-  .hero .wrap,.about,.where{grid-template-columns:1fr}
-  .hero{padding-top:110px}
-  .photo{order:-1;max-width:420px;margin-inline:auto}
-  .photo .tag{left:8px}
-  footer .wrap{grid-template-columns:1fr}
-}
-@media (prefers-reduced-motion:reduce){.bat{display:none}.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.person{transition:none}}
+@media (max-width:760px){.split{grid-template-columns:1fr}.moon{top:16px;right:16px;width:52px}.hero{padding-top:110px}}
+@media (prefers-reduced-motion:reduce){.bat{animation:none;display:none}.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
 
 <header class="hero">
-  <nav><div class="wrap">
-    <a class="logo" href="https://freespiritdance.ro" target="_blank" rel="noopener" aria-label="Free Spirit Dance"><img src="img/logo.svg?v=3" alt="Free Spirit Dance"></a>
-    <a class="navlink" href="https://freespiritdance.ro" target="_blank" rel="noopener">freespiritdance.ro</a>
-  </div></nav>
+  <div class="moon" aria-hidden="true"></div>
   <div class="bats" aria-hidden="true">
-    <span class="bat" style="top:16%;animation-duration:24s;animation-delay:-4s">🦇</span>
-    <span class="bat" style="top:44%;animation-duration:32s;animation-delay:-16s">🦇</span>
-    <span class="bat" style="top:78%;animation-duration:27s;animation-delay:-9s">🦇</span>
+    <span class="bat" style="top:14%;animation-duration:22s;animation-delay:-3s">🦇</span>
+    <span class="bat" style="top:30%;animation-duration:30s;animation-delay:-14s">🦇</span>
+    <span class="bat" style="top:62%;animation-duration:26s;animation-delay:-8s">🦇</span>
   </div>
-  <div class="wrap">
-    <div>
-      <span class="badge"><i></i>Brazilian Zouk · București</span>
-      <h1>Zouk <span class="gt" style="background:linear-gradient(135deg,#a98bff,#ff6b9e);-webkit-background-clip:text;background-clip:text">Halloween</span></h1>
-      <p class="sub">A free night of fluidity, connection and flow. Come dressed to haunt the dance floor.</p>
-      <div class="pills">
-        <span class="pill"><b>Sunday</b> · 1 November · 18:00</span>
-        <span class="pill"><b>Latin Dreams</b> · Cocor, Bucharest</span>
-        <span class="pill"><b>Free</b> entry</span>
-      </div>
-      <div class="btns">
-        <a class="btn primary" href="#where">Find us</a>
-        <a class="btn ghost" id="ics" href="#" download="zouk-halloween.ics">Add to calendar</a>
-      </div>
-      <div class="count" id="count" hidden>
-        <div><strong id="d">0</strong><span>days</span></div>
-        <div><strong id="h">0</strong><span>hours</span></div>
-        <div><strong id="m">0</strong><span>min</span></div>
-      </div>
+  <div class="wrap" style="position:relative">
+    <p class="kicker">Free Spirit Dance School presents</p>
+    <h1>Zouk<br>Halloween</h1>
+    <p class="sub">A night of smooth, spooky, slow-motion magic. Come dressed to haunt the dance floor.</p>
+    <div class="pills">
+      <span class="pill"><b>Sunday</b> · 1 November · 18:00</span>
+      <span class="pill"><b>Latin Dreams</b> · Cocor, Bucharest</span>
+      <span class="pill"><b>Free</b> entry</span>
     </div>
-    <div class="photo">
-      <img src="img/hero.jpg" alt="A zouk couple dancing, the leader in black holding the follower in a deep burgundy dress mid-backbend" width="1000" height="1100">
-      <div class="tag">Free Spirit <span>Dance</span></div>
+    <div class="btns">
+      <a class="btn primary" href="#where">Find us</a>
+      <a class="btn ghost" id="ics" href="#" download="zouk-halloween.ics">Add to calendar</a>
+    </div>
+    <div class="count" id="count" aria-live="off" hidden>
+      <div><strong id="d">0</strong><span>days</span></div>
+      <div><strong id="h">0</strong><span>hours</span></div>
+      <div><strong id="m">0</strong><span>min</span></div>
     </div>
   </div>
 </header>
 
 <section class="s" id="about">
-  <div class="wrap about reveal">
-    <div>
-      <p class="eyebrow">The school</p>
-      <h2>Bucharest's first <span class="gt">Brazilian Zouk</span> school</h2>
-      <p class="lead">Free Spirit Dance is a place to feel at home: no pressure, no judgment, just the joy of moving freely together. This Halloween party is our way of inviting the whole community onto the floor.</p>
-      <div class="words"><span>Fluidity</span><span>Connection</span><span>Flow</span></div>
-    </div>
-    <div class="cards">
-      <div class="card"><div class="ic">🎃</div><h3>Costumes welcome</h3><p>Witch, vampire, ghost or just a little glitter.</p></div>
-      <div class="card"><div class="ic">🎶</div><h3>Zouk all night</h3><p>Smooth Brazilian zouk, every level welcome.</p></div>
-      <div class="card"><div class="ic">🕯️</div><h3>New? Come anyway</h3><p>Meet the community and see what zouk feels like.</p></div>
+  <div class="wrap reveal">
+    <h2>Dance with the <em>spirits</em></h2>
+    <p class="lead">Free Spirit Dance School invites the Bucharest zouk community, and anyone curious, to a Halloween party made for dancing. Costumes are welcome, experience is not required.</p>
+    <div class="grid">
+      <div class="card"><div class="ic">🎃</div><h3>Costumes welcome</h3><p>Witch, vampire, ghost or just a little glitter. Show up in whatever feels spirited.</p></div>
+      <div class="card"><div class="ic">🎶</div><h3>Zouk all night</h3><p>Flowing Brazilian zouk on the dance floor, with room for every level.</p></div>
+      <div class="card"><div class="ic">🕯️</div><h3>Friendly crowd</h3><p>New to zouk? Come meet the community and watch, learn or dance.</p></div>
     </div>
   </div>
 </section>
 
-<section class="s team" id="team">
+<section class="s" id="team">
   <div class="wrap reveal">
-    <p class="eyebrow">Our team</p>
-    <h2>Meet the <span class="gt">instructors</span></h2>
-    <p class="lead">The passionate people behind Free Spirit Dance. Say hi on the dance floor.</p>
+    <h2>Meet the <em>instructors</em></h2>
+    <p class="lead">The people behind Free Spirit Dance, Bucharest's first Brazilian Zouk school. Say hi on the dance floor.</p>
     <div class="people">
       <article class="person"><img loading="lazy" src="img/armin.jpg" alt="Armin Sharm" width="600" height="750"><div><h3>Armin Sharm</h3><a href="https://instagram.com/dj_sharm" target="_blank" rel="noopener">@dj_sharm</a></div></article>
       <article class="person"><img loading="lazy" src="img/raluca.jpg" alt="Raluca Mihaela Ion" width="600" height="750"><div><h3>Raluca Mihaela Ion</h3><a href="https://instagram.com/ralucamihaelaion" target="_blank" rel="noopener">@ralucamihaelaion</a></div></article>
@@ -203,21 +157,20 @@ footer .links{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:8px}
   </div>
 </section>
 
-<section class="free" id="free">
-  <div class="wrap reveal">
+<section class="s band" id="free">
+  <div class="wrap free reveal">
     <div class="big">Free entry</div>
     <p>There is no ticket. If you enjoy the night and want to support the school and its events, donations are warmly welcome on the evening.</p>
   </div>
 </section>
 
-<section class="s light" id="where">
-  <div class="wrap where reveal">
+<section class="s" id="where">
+  <div class="wrap split reveal">
     <div>
-      <p class="eyebrow">Where &amp; when</p>
-      <h2>See you at <span class="gt">Latin Dreams</span></h2>
+      <h2>Where & <em>when</em></h2>
       <p class="addr"><strong>Latin Dreams</strong>, Cocor building<small>Bd. I.C. Brătianu 29-33, Bucharest</small></p>
       <p class="addr"><strong>Sunday, 1 November, 18:00</strong><small>Updates on our Instagram</small></p>
-      <div class="btns" style="margin-top:22px">
+      <div class="btns" style="justify-content:flex-start">
         <a class="btn primary" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Cocor+Bd.+I.C.+Br%C4%83tianu+29-33+Bucure%C8%99ti">Open in Maps</a>
         <a class="btn ghost" target="_blank" rel="noopener" href="https://www.instagram.com/free.spiritdanceromania/">Instagram</a>
       </div>
@@ -231,25 +184,15 @@ footer .links{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:8px}
 
 <footer>
   <div class="wrap">
-    <a class="logo" href="https://freespiritdance.ro" target="_blank" rel="noopener" aria-label="Free Spirit Dance"><img src="img/logo.svg?v=3" alt="Free Spirit Dance"></a>
-    <div>
-      <p>Discover the freedom of movement and the joy of dancing Brazilian Zouk.</p>
-      <p>Studio: Intrarea Vitor Eftimiu nr. 2, București</p>
-      <div class="links">
-        <a href="https://freespiritdance.ro" target="_blank" rel="noopener">Website</a>
-        <a href="https://www.instagram.com/free.spiritdanceromania" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://www.facebook.com/free.spiritdanceromania" target="_blank" rel="noopener">Facebook</a>
-        <a href="https://www.youtube.com/@free.spiritdanceromania" target="_blank" rel="noopener">YouTube</a>
-        <a href="https://www.tiktok.com/@free.spiritdanceromania" target="_blank" rel="noopener">TikTok</a>
-        <a href="https://wa.me/40735425765" target="_blank" rel="noopener">WhatsApp</a>
-      </div>
-    </div>
+    <div class="brand">Free Spirit Dance School</div>
+    <p>Bucharest · <a href="https://www.instagram.com/free.spiritdanceromania/" target="_blank" rel="noopener">@free.spiritdanceromania</a></p>
   </div>
 </footer>
 
 <script>
 (function(){
   var start = new Date("2026-11-01T18:00:00+02:00");
+  // countdown
   var box = document.getElementById('count');
   function tick(){
     var ms = start - new Date();
@@ -260,14 +203,16 @@ footer .links{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:8px}
     document.getElementById('m').textContent = Math.floor(ms%36e5/6e4);
   }
   tick(); setInterval(tick, 30000);
+  // calendar file (all-day event)
   var ics = ['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Free Spirit Dance//Zouk Halloween//EN','BEGIN:VEVENT',
-    'UID:zouk-halloween-2026@freespiritdance.ro','DTSTAMP:20261025T000000Z','DTSTART:20261101T160000Z',
+    'UID:zouk-halloween-2026@freespirit','DTSTAMP:20261025T000000Z','DTSTART:20261101T160000Z',
     'SUMMARY:Zouk Halloween Party (Free Spirit Dance)','LOCATION:Latin Dreams\\, Cocor\\, Bd. I.C. Bratianu 29-33\\, Bucharest',
     'DESCRIPTION:Free entry\\, donations welcome.','END:VEVENT','END:VCALENDAR'].join('\r\n');
   document.getElementById('ics').href = 'data:text/calendar;charset=utf-8,' + encodeURIComponent(ics);
+  // reveal on scroll
   var els = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+    var io = new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
     els.forEach(function(el){io.observe(el)});
   } else els.forEach(function(el){el.classList.add('in')});
 })();
