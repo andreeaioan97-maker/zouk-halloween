@@ -13,7 +13,7 @@
 <link rel="icon" href="img/logo.svg?v=3" type="image/svg+xml">
 <link rel="preload" href="fonts/urbanist.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"DanceEvent","name":"Zouk Halloween Party","startDate":"2026-11-01","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"Latin Dreams","address":{"@type":"PostalAddress","streetAddress":"Bd. I.C. Brătianu 29-33 (Cocor)","addressLocality":"Bucharest","addressCountry":"RO"}},"organizer":{"@type":"Organization","name":"Free Spirit Dance","url":"https://freespiritdance.ro"},"isAccessibleForFree":true}
+{"@context":"https://schema.org","@type":"DanceEvent","name":"Zouk Halloween Party","startDate":"2026-11-01T18:00:00+02:00","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"Latin Dreams","address":{"@type":"PostalAddress","streetAddress":"Bd. I.C. Brătianu 29-33 (Cocor)","addressLocality":"Bucharest","addressCountry":"RO"}},"organizer":{"@type":"Organization","name":"Free Spirit Dance","url":"https://freespiritdance.ro"},"isAccessibleForFree":true}
 </script>
 <style>
 @font-face{font-family:Urbanist;src:url(fonts/urbanist.woff2) format("woff2");font-weight:100 900;font-display:swap}
@@ -151,7 +151,7 @@ footer .links{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:8px}
       <h1>Zouk <span class="gt" style="background:linear-gradient(135deg,#a98bff,#ff6b9e);-webkit-background-clip:text;background-clip:text">Halloween</span></h1>
       <p class="sub">A free night of fluidity, connection and flow. Come dressed to haunt the dance floor.</p>
       <div class="pills">
-        <span class="pill"><b>Sunday</b> · 1 November</span>
+        <span class="pill"><b>Sunday</b> · 1 November · 18:00</span>
         <span class="pill"><b>Latin Dreams</b> · Cocor, Bucharest</span>
         <span class="pill"><b>Free</b> entry</span>
       </div>
@@ -216,7 +216,7 @@ footer .links{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:8px}
       <p class="eyebrow">Where &amp; when</p>
       <h2>See you at <span class="gt">Latin Dreams</span></h2>
       <p class="addr"><strong>Latin Dreams</strong>, Cocor building<small>Bd. I.C. Brătianu 29-33, Bucharest</small></p>
-      <p class="addr"><strong>Sunday, 1 November</strong><small>Exact hour and updates on our Instagram</small></p>
+      <p class="addr"><strong>Sunday, 1 November, 18:00</strong><small>Updates on our Instagram</small></p>
       <div class="btns" style="margin-top:22px">
         <a class="btn primary" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Cocor+Bd.+I.C.+Br%C4%83tianu+29-33+Bucure%C8%99ti">Open in Maps</a>
         <a class="btn ghost" target="_blank" rel="noopener" href="https://www.instagram.com/free.spiritdanceromania/">Instagram</a>
@@ -249,7 +249,7 @@ footer .links{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:8px}
 
 <script>
 (function(){
-  var start = new Date(2026,10,1,0,0,0);
+  var start = new Date("2026-11-01T18:00:00+02:00");
   var box = document.getElementById('count');
   function tick(){
     var ms = start - new Date();
@@ -261,7 +261,7 @@ footer .links{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:8px}
   }
   tick(); setInterval(tick, 30000);
   var ics = ['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Free Spirit Dance//Zouk Halloween//EN','BEGIN:VEVENT',
-    'UID:zouk-halloween-2026@freespiritdance.ro','DTSTAMP:20261025T000000Z','DTSTART;VALUE=DATE:20261101','DTEND;VALUE=DATE:20261102',
+    'UID:zouk-halloween-2026@freespiritdance.ro','DTSTAMP:20261025T000000Z','DTSTART:20261101T160000Z',
     'SUMMARY:Zouk Halloween Party (Free Spirit Dance)','LOCATION:Latin Dreams\\, Cocor\\, Bd. I.C. Bratianu 29-33\\, Bucharest',
     'DESCRIPTION:Free entry\\, donations welcome.','END:VEVENT','END:VCALENDAR'].join('\r\n');
   document.getElementById('ics').href = 'data:text/calendar;charset=utf-8,' + encodeURIComponent(ics);
