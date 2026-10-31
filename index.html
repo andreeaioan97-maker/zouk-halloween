@@ -11,8 +11,8 @@
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%83%3C/text%3E%3C/svg%3E">
 <script>
-// The QR code links to ?qr=1, which plays the intro. Set before first paint so the page never flashes.
-if (/[?&]qr=1(&|$)/.test(location.search)) document.documentElement.classList.add('intro','intro-lock');
+// The intro plays on every load, refresh included. Set before first paint so the page never flashes.
+document.documentElement.classList.add('intro','intro-lock');
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"DanceEvent","name":"Zouk Halloween Party","startDate":"2026-11-01T18:00:00+02:00","endDate":"2026-11-01T21:00:00+02:00","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"Latin Dreams","address":{"@type":"PostalAddress","streetAddress":"Bd. I.C. Brătianu 29-33 (Cocor)","addressLocality":"Bucharest","addressCountry":"RO"}},"organizer":{"@type":"Organization","name":"Free Spirit Dance School"},"isAccessibleForFree":true}
@@ -101,7 +101,7 @@ footer .brand{font-family:var(--display);font-style:italic;font-size:1.4rem;colo
 
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s,transform .8s}
 .reveal.in{opacity:1;transform:none}
-/* QR intro: hidden unless the page was opened with ?qr=1 */
+/* intro: shown once the script in <head> sets html.intro, so it stays hidden without JS */
 .intro-screen{display:none}
 html.intro-lock,html.intro-lock body{overflow:hidden}
 html.intro .intro-screen{display:flex;position:fixed;inset:0;z-index:50;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:16px;overflow:hidden;cursor:pointer;
@@ -278,35 +278,34 @@ html.intro-skip .hero .wrap>*{animation-delay:calc(.2s + var(--i,0)*70ms)}
     'SUMMARY:Zouk Halloween Party (Free Spirit Dance)','LOCATION:Latin Dreams\\, Cocor\\, Bd. I.C. Bratianu 29-33\\, Bucharest',
     'DESCRIPTION:Free entry\\, donations welcome.','END:VEVENT','END:VCALENDAR'].join('\r\n');
   document.getElementById('ics').href = 'data:text/calendar;charset=utf-8,' + encodeURIComponent(ics);
-  // QR intro
+  // intro
   var root = document.documentElement, intro = document.getElementById('intro');
-  if (root.classList.contains('intro')) {
-    // a reload or a shared link afterwards goes straight to the page
-    history.replaceState(null, '', location.pathname + location.hash);
-    var n = 0;
-    document.querySelectorAll('#introTitle span').forEach(function(w){
-      w.setAttribute('aria-hidden','true');
-      w.innerHTML = w.textContent.split('').map(function(c){return '<i style="--i:'+(n++)+'">'+c+'</i>'}).join('');
-    });
-    function rnd(a,b){return a+Math.random()*(b-a)}
-    for (var i=0;i<14;i++){
-      var b=document.createElement('span'), a=Math.random()*Math.PI*2, r=Math.max(innerWidth,innerHeight);
-      b.className='in-bat'; b.textContent='🦇'; b.setAttribute('aria-hidden','true');
-      b.style.cssText='--x:'+Math.cos(a)*r+'px;--y:'+Math.sin(a)*r+'px;--r:'+rnd(-30,30)+'deg;--t:'+rnd(1.6,2.8)+'s;--d:'+rnd(.5,1.8)+'s';
-      intro.insertBefore(b,intro.children[1]);
-    }
-    for (var j=0;j<26;j++){
-      var e=document.createElement('span');
-      e.className='in-ember'; e.setAttribute('aria-hidden','true');
-      e.style.cssText='left:'+rnd(0,100)+'%;--s:'+rnd(2,5)+'px;--x:'+rnd(-60,60)+'px;--t:'+rnd(2.2,4.2)+'s;--d:'+rnd(0,2.5)+'s';
-      intro.insertBefore(e,intro.children[1]);
-    }
-    intro.addEventListener('animationend',function(ev){
-      if (ev.target!==intro) return;
-      intro.remove(); root.classList.remove('intro-lock');
-    });
-    intro.addEventListener('click',function(){root.classList.add('intro-skip')});
-  } else intro.remove();
+  // printed QR codes link to ?qr=1; keep the address clean. A refresh starts from the top, with the intro.
+  if (location.search) history.replaceState(null, '', location.pathname + location.hash);
+  if (!location.hash) history.scrollRestoration = 'manual';
+  var n = 0;
+  document.querySelectorAll('#introTitle span').forEach(function(w){
+    w.setAttribute('aria-hidden','true');
+    w.innerHTML = w.textContent.split('').map(function(c){return '<i style="--i:'+(n++)+'">'+c+'</i>'}).join('');
+  });
+  function rnd(a,b){return a+Math.random()*(b-a)}
+  for (var i=0;i<14;i++){
+    var b=document.createElement('span'), a=Math.random()*Math.PI*2, r=Math.max(innerWidth,innerHeight);
+    b.className='in-bat'; b.textContent='🦇'; b.setAttribute('aria-hidden','true');
+    b.style.cssText='--x:'+Math.cos(a)*r+'px;--y:'+Math.sin(a)*r+'px;--r:'+rnd(-30,30)+'deg;--t:'+rnd(1.6,2.8)+'s;--d:'+rnd(.5,1.8)+'s';
+    intro.insertBefore(b,intro.children[1]);
+  }
+  for (var j=0;j<26;j++){
+    var e=document.createElement('span');
+    e.className='in-ember'; e.setAttribute('aria-hidden','true');
+    e.style.cssText='left:'+rnd(0,100)+'%;--s:'+rnd(2,5)+'px;--x:'+rnd(-60,60)+'px;--t:'+rnd(2.2,4.2)+'s;--d:'+rnd(0,2.5)+'s';
+    intro.insertBefore(e,intro.children[1]);
+  }
+  intro.addEventListener('animationend',function(ev){
+    if (ev.target!==intro) return;
+    intro.remove(); root.classList.remove('intro-lock');
+  });
+  intro.addEventListener('click',function(){root.classList.add('intro-skip')});
   // reveal on scroll
   var els = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {
