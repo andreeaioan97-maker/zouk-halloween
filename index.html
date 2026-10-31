@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Zouk Halloween Party · Free Spirit Dance</title>
-<meta name="description" content="Free zouk Halloween dance party by Free Spirit Dance School. 1 November, 18:00-21:00, at Latin Dreams, Cocor, Bucharest. All are welcome, no experience needed. Free entry, donations welcome.">
+<meta name="description" content="Free zouk Halloween dance party by Free Spirit Dance School. 1 November, 18:00-21:00, at Latino Dreams, Cocor, Bucharest. All are welcome, no experience needed. Free entry, donations welcome.">
 <meta name="theme-color" content="#120a1c">
 <meta property="og:title" content="Zouk Halloween Party · Free Spirit Dance">
-<meta property="og:description" content="1 November, 18:00-21:00 · Latin Dreams, Cocor, Bucharest · All are welcome, no experience needed · Free entry, donations welcome.">
+<meta property="og:description" content="1 November, 18:00-21:00 · Latino Dreams, Cocor, Bucharest · All are welcome, no experience needed · Free entry, donations welcome.">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%83%3C/text%3E%3C/svg%3E">
 <script>
@@ -15,7 +15,7 @@
 document.documentElement.classList.add('intro','intro-lock');
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"DanceEvent","name":"Zouk Halloween Party","startDate":"2026-11-01T18:00:00+02:00","endDate":"2026-11-01T21:00:00+02:00","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"Latin Dreams","address":{"@type":"PostalAddress","streetAddress":"Bd. I.C. Brătianu 29-33 (Cocor)","addressLocality":"Bucharest","addressCountry":"RO"}},"organizer":{"@type":"Organization","name":"Free Spirit Dance School"},"isAccessibleForFree":true}
+{"@context":"https://schema.org","@type":"DanceEvent","name":"Zouk Halloween Party","startDate":"2026-11-01T18:00:00+02:00","endDate":"2026-11-01T21:00:00+02:00","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"Latino Dreams","address":{"@type":"PostalAddress","streetAddress":"Bd. I.C. Brătianu 29-33 (Cocor)","addressLocality":"Bucharest","addressCountry":"RO"}},"organizer":{"@type":"Organization","name":"Free Spirit Dance School"},"isAccessibleForFree":true}
 </script>
 <style>
 :root{
@@ -45,6 +45,10 @@ a{color:inherit}
 .bat{position:absolute;font-size:clamp(18px,3vw,34px);opacity:.75;animation:fly linear infinite}
 @keyframes fly{from{transform:translateX(-12vw) translateY(0)}50%{transform:translateX(50vw) translateY(-30px)}to{transform:translateX(112vw) translateY(10px)}}
 .kicker{letter-spacing:.32em;text-transform:uppercase;font-size:.78rem;color:var(--orange);font-weight:600}
+.school{display:flex;flex-direction:column;align-items:center;gap:8px}
+.logo-link{display:block;border-radius:50%}
+.logo{display:block;width:clamp(84px,14vw,112px);height:auto;filter:drop-shadow(0 0 16px rgba(255,138,31,.55))}
+.school-name{font-family:var(--display);font-style:italic;font-weight:700;line-height:1.1;font-size:clamp(1.75rem,5.4vw,2.9rem);color:var(--ink);text-shadow:0 0 26px rgba(255,138,31,.6)}
 h1{font-family:var(--display);font-weight:700;font-style:italic;line-height:.95;margin:18px 0 10px;
   font-size:clamp(3.2rem,15vw,9.5rem);
   background:linear-gradient(180deg,#ffd9a1,var(--orange) 55%,var(--orange-d));-webkit-background-clip:text;background-clip:text;color:transparent;
@@ -89,7 +93,7 @@ h2 em{color:var(--orange)}
 
 footer{padding:50px 0 70px;text-align:center;color:var(--muted);font-size:.92rem;border-top:1px solid var(--line)}
 footer a{color:var(--orange)}
-footer .brand{font-family:var(--display);font-style:italic;font-size:1.4rem;color:var(--ink);margin-bottom:6px}
+footer .brand{font-family:var(--display);font-style:italic;font-weight:700;font-size:clamp(1.8rem,5vw,2.4rem);line-height:1.2;color:var(--ink);margin-bottom:6px}
 
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s,transform .8s}
 .reveal.in{opacity:1;transform:none}
@@ -117,7 +121,7 @@ html.intro-skip .intro-screen{animation:irisFast .5s cubic-bezier(.7,0,.3,1) for
 .in-ember{position:absolute;bottom:-10px;width:var(--s);height:var(--s);border-radius:50%;background:var(--orange);box-shadow:0 0 10px 2px rgba(255,138,31,.7);opacity:0;animation:ember var(--t) ease-out var(--d) infinite}
 @keyframes ember{0%{transform:none;opacity:0}15%{opacity:.9}100%{transform:translate(var(--x),-85vh);opacity:0}}
 .in-text{position:relative;display:flex;flex-direction:column;align-items:center}
-.in-text .kicker{animation:inUp .7s ease 1.1s both}
+.in-text .school{animation:inUp .7s ease 1.1s both}
 .in-title{font-family:var(--display);font-weight:700;font-style:italic;line-height:.98;margin:16px 0 14px;font-size:clamp(3.2rem,15vw,9.5rem);filter:drop-shadow(0 6px 40px rgba(255,138,31,.45))}
 .in-title span{display:block;white-space:nowrap}
 .in-title i{display:inline-block;font-style:inherit;padding-inline:.04em;margin-inline:-.04em;background:linear-gradient(180deg,#ffd9a1,var(--orange) 55%,var(--orange-d));-webkit-background-clip:text;background-clip:text;color:transparent;
@@ -137,7 +141,7 @@ html.intro-skip .hero .wrap>*{animation-delay:calc(.2s + var(--i,0)*70ms)}
   html.intro .intro-screen{clip-path:none;animation:introFade .5s ease 1.6s forwards}
   html.intro-skip .intro-screen{animation:introFade .2s ease forwards}
   .in-moon{animation:none;opacity:.2}.in-bat,.in-ember{display:none}
-  .in-text .kicker,.in-title i,.in-when,html.intro .hero .wrap>*{animation:none}
+  .in-text .school,.in-title i,.in-when,html.intro .hero .wrap>*{animation:none}
   .bat{animation:none;display:none}.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
 @keyframes introFade{to{opacity:0;visibility:hidden}}
 </style>
@@ -147,7 +151,7 @@ html.intro-skip .hero .wrap>*{animation-delay:calc(.2s + var(--i,0)*70ms)}
 <div class="intro-screen" id="intro">
   <div class="in-moon" aria-hidden="true"></div>
   <div class="in-text">
-    <p class="kicker">Free Spirit Dance School presents</p>
+    <div class="school"><img class="logo" src="img/free-spirit-logo.svg" alt="Free Spirit Dance logo" width="224" height="224"><p class="school-name">Free Spirit Dance School</p><p class="kicker">presents</p></div>
     <div class="in-title" id="introTitle" aria-label="Zouk Halloween"><span>Zouk</span><span>Halloween</span></div>
     <p class="in-when"><b>Sunday, 1 November</b> · 18:00-21:00</p>
   </div>
@@ -162,12 +166,12 @@ html.intro-skip .hero .wrap>*{animation-delay:calc(.2s + var(--i,0)*70ms)}
     <span class="bat" style="top:62%;animation-duration:26s;animation-delay:-8s">🦇</span>
   </div>
   <div class="wrap" style="position:relative">
-    <p class="kicker">Free Spirit Dance School presents</p>
+    <div class="school"><a class="logo-link" href="https://freespiritdance.ro/" target="_blank" rel="noopener"><img class="logo" src="img/free-spirit-logo.svg" alt="Free Spirit Dance logo" width="224" height="224"></a><p class="school-name">Free Spirit Dance School</p><p class="kicker">presents</p></div>
     <h1>Zouk<br>Halloween</h1>
-    <p class="sub">A night of smooth, spooky, slow-motion magic. Come dressed to haunt the dance floor.</p>
+    <p class="sub">An evening of smooth, spooky, slow-motion magic. Come dressed to haunt the dance floor.</p>
     <div class="pills">
       <span class="pill"><b>Sunday</b> · 1 November · 18:00-21:00</span>
-      <span class="pill"><b>Latin Dreams</b> · Cocor, Bucharest</span>
+      <span class="pill"><b>Latino Dreams</b> · Cocor, Bucharest</span>
       <span class="pill"><b>Free</b> entry</span>
       <span class="pill"><b>All welcome</b> · no experience needed</span>
     </div>
@@ -187,7 +191,7 @@ html.intro-skip .hero .wrap>*{animation-delay:calc(.2s + var(--i,0)*70ms)}
 <section class="s band" id="welcome">
   <div class="wrap free reveal">
     <div class="big">All are welcome</div>
-    <p>No experience needed. Bring a friend and get your first taste of zouk in a friendly environment.</p>
+    <p>No experience needed. Bring a friend and get your first taste of zouk in a spooky but friendly environment.</p>
   </div>
 </section>
 
@@ -206,7 +210,7 @@ html.intro-skip .hero .wrap>*{animation-delay:calc(.2s + var(--i,0)*70ms)}
 <section class="s band" id="free">
   <div class="wrap free reveal">
     <div class="big">Free entry</div>
-    <p>There is no ticket. If you enjoy the night and want to support the school and its events, donations are warmly welcome on the evening.</p>
+    <p>There is no ticket. If you enjoy the evening and want to support the school and its events, donations are warmly welcome at the event.</p>
   </div>
 </section>
 
@@ -214,7 +218,7 @@ html.intro-skip .hero .wrap>*{animation-delay:calc(.2s + var(--i,0)*70ms)}
   <div class="wrap split reveal">
     <div>
       <h2>Where & <em>when</em></h2>
-      <p class="addr"><strong>Latin Dreams</strong>, Cocor building<small>Bd. I.C. Brătianu 29-33, Bucharest</small></p>
+      <p class="addr"><strong>Latino Dreams</strong>, Cocor building<small>Bd. I.C. Brătianu 29-33, Bucharest</small></p>
       <p class="addr"><strong>Sunday, 1 November, 18:00-21:00</strong><small>Three-hour practice · Updates on our Instagram</small></p>
       <div class="btns" style="justify-content:flex-start">
         <a class="btn primary" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Cocor+Bd.+I.C.+Br%C4%83tianu+29-33+Bucure%C8%99ti">Open in Maps</a>
@@ -230,8 +234,9 @@ html.intro-skip .hero .wrap>*{animation-delay:calc(.2s + var(--i,0)*70ms)}
 
 <footer>
   <div class="wrap">
+    <img class="logo" style="margin:0 auto 12px" src="img/free-spirit-logo.svg" alt="" width="224" height="224">
     <div class="brand">Free Spirit Dance School</div>
-    <p>Bucharest · <a href="https://www.instagram.com/free.spiritdanceromania/" target="_blank" rel="noopener">@free.spiritdanceromania</a></p>
+    <p>Bucharest · <a href="https://freespiritdance.ro/" target="_blank" rel="noopener">freespiritdance.ro</a> · <a href="https://www.instagram.com/free.spiritdanceromania/" target="_blank" rel="noopener">@free.spiritdanceromania</a></p>
   </div>
 </footer>
 
@@ -253,7 +258,7 @@ html.intro-skip .hero .wrap>*{animation-delay:calc(.2s + var(--i,0)*70ms)}
   // calendar file
   var ics = ['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Free Spirit Dance//Zouk Halloween//EN','BEGIN:VEVENT',
     'UID:zouk-halloween-2026@freespirit','DTSTAMP:20261025T000000Z','DTSTART:20261101T160000Z','DTEND:20261101T190000Z',
-    'SUMMARY:Zouk Halloween Party (Free Spirit Dance)','LOCATION:Latin Dreams\\, Cocor\\, Bd. I.C. Bratianu 29-33\\, Bucharest',
+    'SUMMARY:Zouk Halloween Party (Free Spirit Dance)','LOCATION:Latino Dreams\\, Cocor\\, Bd. I.C. Bratianu 29-33\\, Bucharest',
     'DESCRIPTION:Free entry\\, donations welcome.','END:VEVENT','END:VCALENDAR'].join('\r\n');
   document.getElementById('ics').href = 'data:text/calendar;charset=utf-8,' + encodeURIComponent(ics);
   // intro
